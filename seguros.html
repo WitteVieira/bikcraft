@@ -8,10 +8,14 @@
   <title>Seguros | Bikcraft</title>
   <meta name="description" content="Seguros.">
 
-  <link rel="stylesheet" href="./css/style.css">
+  <link rel="icon" href="./favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="./css/style.min.css" as="style">
+  <link rel="stylesheet" href="./css/style.min.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@900&family=Montserrat:wght@400;600;900&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+  <script>
+    document.documentElement.classList.add('js');</script>
 </head>
 
 <body id="seguros">
@@ -40,7 +44,7 @@
     </div>
 
     <div class="seguros container">
-      <div class="seguros-item">
+      <div class="seguros-item fadeInLeft" data-anime="200">
         <h3 class="font-1-xl cor-6">PRATA</h3>
         <span class="font-1-xl cor-0">R$ 199<span><span class="font-1-xs cor-6">mensal</span>
             <ul class="font-2-m cor-0">
@@ -49,10 +53,10 @@
               <li>Suporte 08h às 18h</li>
               <li>Cobertura estadual</li>
             </ul>
-            <a class="botao secundario" href="./orcamento.html">Inscreva-se</a>
+            <a class="botao secundario" href="./orcamento.html?tipo=seguro&produto=prata">Inscreva-se</a>
       </div>
 
-      <div class="seguros-item">
+      <div class="seguros-item fadeInRight" data-anime="400">
         <h3 class="font-1-xl cor-p1">OURO</h3>
         <span class="font-1-xl cor-0">R$ 299<span><span class="font-1-xs cor-6">mensal</span>
             <ul class="font-2-m cor-0">
@@ -63,12 +67,79 @@
               <li>Desconto em parceiros</li>
               <li>Acesso ao Clube Bikcraft</li>
             </ul>
-            <a class="botao" href="./orcamento.html">Inscreva-se</a>
+            <a class="botao" href="./orcamento.html?tipo=seguro&produto=ouro">Inscreva-se</a>
       </div>
     </div>
 
   </main>
 
+  <article class="vantagens-bg">
+    <div class="vantagens container">
+      <h2 class="font-1-xxl cor-0">vantagens<span class="cor-p1">.</span></h2>
+      <ul>
+        <li>
+          <img src="./img/icones/eletrica.svg" alt="">
+          <h3 class="font-1-l cor-0">Reparo Elétrico</h3>
+          <p class="font-2-s cor-5">Garantimos o reparo completo do seu motor em caso de falhas. Sabemos que falhas são raras, mas estamos aqui para caso ocorra.</p>
+        </li>
+        <li>
+          <img src="./img/icones/carbono.svg" alt="">
+          <h3 class="font-1-l cor-0">Carbono</h3>
+          <p class="font-2-s cor-5">Nossos quadros são feitos para durar para sempre. Mas caso algo ocorra, ficamos felizes em reparar.</p>
+        </li>
+        <li>
+          <img src="./img/icones/sustentavel.svg" alt="">
+          <h3 class="font-1-l cor-0">Sustentável</h3>
+          <p class="font-2-s cor-5">Trabalhamos com a folosofia de desperdicio zero. Qualquer parte defeituosa é reciclada e reutilizada em outro projeto.</p>
+        </li>
+        <li>
+          <img src="./img/icones/rastreador.svg" alt="">
+          <h3 class="font-1-l cor-0">Rastreador</h3>
+          <p class="font-2-s cor-5">Utilizamos o GPS da sua Bikcraft em conjunto com especialistas em segurança para efetuarmos a recuperação.</p>
+        </li>
+        <li>
+          <img src="./img/icones/seguro.svg" alt="">
+          <h3 class="font-1-l cor-0">Segurança</h3>
+          <p class="font-2-s cor-5">Com o seguro Bikcraft você pode ficar tranquilo em saber que o seu dinheiro não será perdido em caso de roubo.</p>
+        </li>
+        <li>
+          <img src="./img/icones/velocidade.svg" alt="">
+          <h3 class="font-1-l cor-0">Rapidez</h3>
+          <p class="font-2-s cor-5">A sua Bikcraft ficará pronta para uso no mesmo dia, caso você traga ela para ser reparada em uma das filiais.</p>
+        </li>
+      </ul>
+    </div>
+  </article>
+
+  <article class="perguntas container">
+    <h2 class="font-1-xxl">perguntas frequentes<span class="cor-p1">.</span></h2>
+    <dl>
+      <div>
+        <dt><button class="font-1-m-b" aria-controls="pergunta1" aria-expanded="true">Qual forma de pagamento vocês aceitam?</button></dt>
+        <dd id="pergunta1" class="font-2-s cor-9 ativa">Aceitamos pagamentos à vista também aceitamos PIX e boleto através do PagSeguro.</dd>
+      </div>
+      <div>
+        <dt><button class="font-1-m-b" aria-controls="pergunta2" aria-expanded="false">Como posso entrar em contato?</button></dt>
+        <dd id="pergunta2" class="font-2-s cor-9">Aceitamos pagamentos à vista também aceitamos PIX e boleto através do PagSeguro.</dd>
+      </div>
+      <div>
+        <dt><button class="font-1-m-b" aria-controls="pergunta3" aria-expanded="false">Vocês possuem algum desconto?</button></dt>
+        <dd id="pergunta3" class="font-2-s cor-9">Aceitamos pagamentos à vista também aceitamos PIX e boleto através do PagSeguro.</dd>
+      </div>
+      <div>
+        <dt><button class="font-1-m-b" aria-controls="pergunta4" aria-expanded="false">Qual garantia que possuo?</button></dt>
+        <dd id="pergunta4" class="font-2-s cor-9">Aceitamos pagamentos à vista também aceitamos PIX e boleto através do PagSeguro.</dd>
+      </div>
+      <div>
+        <dt><button class="font-1-m-b" aria-controls="pergunta5" aria-expanded="false">Posso parcelar no boleto?</button></dt>
+        <dd id="pergunta5" class="font-2-s cor-9">Aceitamos pagamentos à vista também aceitamos PIX e boleto através do PagSeguro.</dd>
+      </div>
+      <div>
+        <dt><button class="font-1-m-b" aria-controls="pergunta6" aria-expanded="false">Quantas trocas posso fazer por ano?</button></dt>
+        <dd id="pergunta6" class="font-2-s cor-9">Aceitamos pagamentos à vista também aceitamos PIX e boleto através do PagSeguro.</dd>
+      </div>
+    </dl>
+  </article>
 
   <footer class="footer-bg">
     <div class="footer container">
@@ -107,6 +178,8 @@
     </div>
   </footer>
 
+  <script src="./js/plugins/simple-anime.js"></script>
+  <script src="./js/script.js"></script>
 </body>
 
 </html>
